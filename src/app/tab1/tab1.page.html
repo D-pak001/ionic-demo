@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <form (ngSubmit)="saveForm()">
+          <ion-item>
+            <ion-label position="stacked">
+              Enter your name
+            </ion-label>
+            <ion-input [(ngModel)]="name" name="name" type="text"></ion-input>
+          </ion-item>
+          <div class="ion-padding">
+            <ion-button expand="block" type="submit" class="ion-no-margin">Save</ion-button>
+          </div>
+        </form>
+      </ion-list>
+    <ion-card class="welcome-card">
+      <img src="/assets/shapes.svg" alt="" />
+      <ion-card-header>
+        <ion-card-subtitle>Hey, {{name}}</ion-card-subtitle>
+        <ion-card-title>Welcome to My app</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>This is a simple practice app</p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
